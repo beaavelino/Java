@@ -25,7 +25,7 @@ programa
 		t3 = (n3 * n3)
 		t4 = (n4 * n4)
 
-		se(t3>=100.00){
+		se(t3>=1000.00){
 			escreva("Valor do número 3: ",t3)
 		}
 		senao{
