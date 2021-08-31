@@ -1,7 +1,7 @@
 programa {
 	funcao inicio(){
-		escreva("OI MUNDO!!\n")
-		escreva("BEATRIZ DE SOUZA AVELINO")	
+		escreva("OLÁ MUNDO!!\n")
+
 	}
 }
 
@@ -10,7 +10,7 @@ programa {
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 0; 
+ * @POSICAO-CURSOR = 56; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
