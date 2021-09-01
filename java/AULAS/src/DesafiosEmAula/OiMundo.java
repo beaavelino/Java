@@ -1,3 +1,4 @@
+package DesafiosEmAula;
 import java.util.Scanner;
 
 public class OiMundo {
