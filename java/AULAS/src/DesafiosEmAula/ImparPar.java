@@ -10,7 +10,7 @@ public class ImparPar {
 		int num;
 		String par, impar;
 		
-		System.out.println("Digite um número");
+		System.out.print("Digite um número: ");
 		num = leia.nextInt();
 		
 		if(num == 0) {

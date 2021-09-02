@@ -2,7 +2,7 @@ package DesafiosEmAula;
 
 import java.util.Scanner;
 
-public class LaçoEnquanto {
+public class LacoEnquanto {
 
 	public static void main(String[] args) {
 		Scanner leia = new Scanner(System.in);

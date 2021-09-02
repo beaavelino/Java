@@ -2,20 +2,20 @@ package DesafiosEmAula;
 
 import java.util.Scanner;
 
-public class LaçoPara {
+public class LacoPara {
 
 	public static void main(String[] args) {
 		
 		Scanner leia = new Scanner(System.in);
 		double somaImpar = 0.00;
-		double x;
+		double n;
 		
 		
-		for(x=0; x<=500; x++) {
-			if((x%2)==1 && (x%3) ==0) {
-			somaImpar = somaImpar+x;	
+		for(n=0; n<=500; n++) {
+			if((n%2)==1 && (n%3) ==0) {
+			somaImpar = somaImpar+n;	
 			
-				System.out.println(x);
+				System.out.println(n);
 			
 			}
 			
