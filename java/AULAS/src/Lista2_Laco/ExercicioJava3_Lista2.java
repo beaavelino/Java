@@ -1,4 +1,4 @@
-package List2;
+package Lista2_Laco;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package List1;
+package Lista1_Basico;
 import java.util.Scanner;
 
 public class ExercicioJava5_Lista1 {
