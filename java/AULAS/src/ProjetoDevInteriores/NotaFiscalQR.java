@@ -19,13 +19,15 @@ public class NotaFiscalQR {
 	
 	static int estoque[] = {10, 10, 10, 10, 10, 10, 10, 10, 10, 10}; //exemplo
 	static int carrinho[] = {1, 3, 5, 6, 2, 8, 1, 4, 2, 1}; //exemplo
-	static double produtosValor[] = {25.99, 40.00, 34.59, 34.44, 234.23, 12.43, 55.23, 90.00, 30.00, 99.99}; //exemplo
+	static double valor[] = {119.99,799.99,109.99,380.99,539.99,649.99,850.99,999.99,220.99,950.99};
 	static double valorTotal=0.0, valorFinal=0.0, valorImposto=0.0;
 	static double juros=0.0, taxaCartao=0.0;
 	static int tipoPagamento = 1;
+	static double imposto = 0.00;
+	static double somatorio;
 	static String nome = "Ricardo Oliveira"; //exemplo
 	static String CPF = "xxx.xxx.xxx-xx"; //exemplo
-	static double somatorio;
+	
 	
 	public static void main(String[] args) {
 
@@ -42,22 +44,22 @@ public class NotaFiscalQR {
 		
 		
 	System.out.print("\n\t\t\t N O T A    F I S C A L\n");
-	System.out.print("--------------------------------------------------------------------------\n");
+	System.out.print("---------------------------------------------------------------------------\n");
 	System.out.print("Itens \t\t\t\t  QtUnit \t VlUnit \t TotalUnit\n\n");
 	
 	for (int i = 0; i < 10; i++) {
 		if (carrinho[i] != 0) {
 			System.out.print(produtosNome[i]);
-			somatorio = carrinho[i]*produtosValor[i];
-			System.out.printf("\t\t  "+carrinho[i] + "\t\t " + produtosValor[i] + "\t\t " + "%.2f \n",somatorio);
+			somatorio = carrinho[i]*valor[i];
+			System.out.printf("\t\t  "+carrinho[i] + "\t\t " + valor[i] + "\t\t " + "%.2f \n",somatorio);
 			
 		}
 	}
 	
-	System.out.print("\n--------------------------------------------------------------------------\n");
+	System.out.print("\n---------------------------------------------------------------------------\n");
 	System.out.print("Imposto:" + "\t\t\t\t\t\t\t " + "R$ " + (valorImposto+3) + Math.round(valorImposto+(2)) + "\n");
 	if (tipoPagamento == 1) { //EDITAR A VERIÁVEL TIPOPAGAMENTO
-		System.out.print("Desconto:" + "\t\t\t\t\t\t\t " + "R$ " + (valorTotal*0.1+(5)) + Math.round(valorTotal*0.1+(5)) + "\n"); 
+		System.out.print("Desconto:\t\t\t\t\t\t\t R$ " + (valorTotal*0.1+(5)) + Math.round(valorTotal*0.1+(5)) + "\n"); 
 	}
 	
 	if (tipoPagamento == 2) { //EDITAR A VERIÁVEL TIPOPAGAMENTO
@@ -69,9 +71,10 @@ public class NotaFiscalQR {
 		System.out.print("Taxa:" + (taxaCartao+(5)) + Math.round(taxaCartao+(2)) + "\n\n");
 	}
 	
-	System.out.print("--------------------------------------------------------------------------\n");
+	System.out.print("---------------------------------------------------------------------------\n");
 	System.out.printf("Total: \t\t\t\t\t\t\t\t R$ " + "%.2f \n",(calculaTotal(+2)));
-	System.out.print("--------------------------------------------------------------------------\n");
+	//System.out.print("\nTotal: \t\t\t\t\t\t\t\t R$ " + (valorFinal+(3)) + Math.round(valorFinal+(2)) + "\n");
+	System.out.print("---------------------------------------------------------------------------\n");
 	System.out.printf("Cliente - %s" ,nome);
 	System.out.printf("\t\t\t      CPF - %s\n" ,CPF);
 	
@@ -84,7 +87,7 @@ public class NotaFiscalQR {
 	String pressione = " ";
 	System.out.print("\n\n\nPressione 'Enter' para voltar ao menu principal.");
 	pressione = leia.next();
-	//paginaPrincipal() ATIVAR QUANDO TIVER TODAS AS PARTES JUNTAS
+	//paginaPrincipal() //ATIVAR QUANDO TIVER TODAS AS PARTES JUNTAS
 	
 	}
 	
@@ -92,7 +95,7 @@ public class NotaFiscalQR {
 	public static double calculaTotal(int i) {
 		double total = 0.0;
 		for (i = 0; i < 10; i++) {
-			total += carrinho[i] + produtosValor[i];
+			total += carrinho[i] + valor[i];
 		}
 		
 		return total;
