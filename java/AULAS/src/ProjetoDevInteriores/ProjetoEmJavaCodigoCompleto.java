@@ -274,7 +274,7 @@ public class ProjetoEmJavaCodigoCompleto {
 		}
 
 		System.out.print("\n---------------------------------------------------------------------------\n");
-		System.out.printf("Total:                                                           R$ " 
+		System.out.printf("Total:                                                                      R$ " 
 				+ "%.2f\n\n", (calculaTotal()));
 		
 		System.out.printf("Imposto:                                                         " 
